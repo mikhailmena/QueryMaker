@@ -1,0 +1,25 @@
+#headerdiv{
+  border: solid white 5px;
+  min-height: 10vh;
+  width: 100vh;
+
+ 
+
+}
+
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+

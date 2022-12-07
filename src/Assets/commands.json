@@ -1,0 +1,443 @@
+ [ 
+    
+    {"postgres": 
+        [
+            {
+                "Database": "postgres",
+                "Action": "Read",
+                "description": "list all  databases",
+                "Command": "\\q"
+            },
+            {
+                "Database": "postgres",
+                "Action": "Read",
+                "description": "list all schemas",
+                "Command": "\\l"
+            },
+            {
+                "Database": "postgres",
+                "Action": "Read",
+                "description": "list all tables",
+                "Command": "\\dv"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query all data from a table:",
+                "Command": "SELECT * FROM table_name;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query data from specified columns of all rows in a table:",
+                "Command": "SELECT column_list FROM table;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query data and select only unique rows:",
+                "Command": "SELECT DISTINCT (column) FROM table;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT * FROM table WHERE condition;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query data using the LIKE operator:",
+                "Command": "SELECT * FROM table_name WHERE column LIKE '%value%'"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query data using the IN operator:",
+                "Command": "SELECT * FROM table_name WHERE column BETWEEN low AND high;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "select",
+                "description": "Query data from multiple using the inner join, left join, full outer join, cross join and natural join:",
+                "Command": "SELECT * FROM table1 INNER JOIN table2 ON conditions"
+            },
+            {
+                "Database": "postgres",
+                "Action": "create",
+                "description": "Create a new role:",
+                "Command": "CREATE ROLE role_name;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "create",
+                "description": "Create a new role with a username and password:",
+                "Command": "CREATE ROLE username NOINHERIT LOGIN PASSWORD password;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "create",
+                "description": "Create a new database:",
+                "Command": "CREATE DATABASE [IF NOT EXISTS] db_name;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "create",
+                "description": "Create a new table or a temporary table",
+                "Command": "CREATE [TEMP] TABLE [IF NOT EXISTS] table_name(   pk SERIAL PRIMARY KEY,    c1 type(size) NOT NULL,    c2 type(size) NULL);"
+            },
+            {
+                "Database": "postgres",
+                "Action": "create",
+                "description": "Create a view:",
+                "Command": "CREATE OR REPLACE view_name AS"
+            },
+            {
+                "Database": "postgres",
+                "Action": "create",
+                "description": "Creating an index with the specified name on a table",
+                "Command": "CREATE [UNIQUE] INDEX index_name ON table (column,...)"
+            },
+            {
+                "Database": "postgres",
+                "Action": "update",
+                "description": "Add a new column to a table:",
+                "Command": "ALTER TABLE table_name ADD COLUMN new_column_name TYPE;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "update",
+                "description": "Change role for the current session to the new_role:",
+                "Command": "CREATE ROLE username NOINHERIT LOGIN PASSWORD password;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "update",
+                "description": "Update data for all rows:",
+                "Command": "UPDATE table_name SET column_1 = value_1,"
+            },
+            {
+                "Database": "postgres",
+                "Action": "update",
+                "description": "Update data for a set of rows specified by a condition in the WHERE clause.",
+                "Command": "UPDATE table SET column_1 = value_1, WHERE condition;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "delete ",
+                "description": "Delete a database permanently:",
+                "Command": "DROP DATABASE [IF EXISTS] db_name;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "delete ",
+                "description": "Delete all rows of a table:",
+                "Command": "DELETE FROM table_name;"
+            },
+            {
+                "Database": "postgres",
+                "Action": "delete ",
+                "description": "Delete specific rows based on a condition:",
+                "Command": "DELETE FROM table_name WHERE condition;"
+            }
+        ]
+        
+    },
+    {"Mysql": 
+        [
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list all  databases",
+                "Command": "SHOW DATABASES;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list all tables",
+                "Command": "SHOW TABLES;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list fields",
+                "Command": "SHOW FIELDS FROM table / DESCRIBE table;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list created tables",
+                "Command": "SHOW CREATE TABLE table;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query all data from a table:",
+                "Command": "SELECT * FROM table;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query all data from multiple tables",
+                "Command": "SELECT * FROM table1, table2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query all data from a filed in a table",
+                "Command": "SELECT field1, field2 FROM table1, table2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition GROUP BY field;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition GROUP BY field HAVING condition2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition ORDER BY field1, field2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition ORDER BY field1, field2 DESC;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition LIMIT 10;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query a filter from a field",
+                "Command": "SELECT DISTINCT field1 FROM ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a Database",
+                "Command": "CREATE DATABASE DatabaseName;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a Database and set character type",
+                "Command": "CREATE DATABASE DatabaseName CHARACTER SET utf8;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a table",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2);"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a table with index",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2, INDEX (field));"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create table with primary key",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2, PRIMARY KEY (field1));"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create table with mulitple primary keys",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2, PRIMARY KEY (field1,field2));"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change field data in a table",
+                "Command": "ALTER TABLE table MODIFY field1 type1"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change field data in a table",
+                "Command": "ALTER TABLE table MODIFY field1 type1 NOT NULL ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change name of field",
+                "Command": "ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change name of field",
+                "Command": "ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 NOT NULL ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change table field",
+                "Command": "ALTER TABLE table ALTER field1 SET DEFAULT ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change field order",
+                "Command": "ALTER TABLE table MODIFY field1 type1 FIRST"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "delete ",
+                "description": "Delete everything from table",
+                "Command": "DELETE FROM table1 / TRUNCATE table1"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "delete ",
+                "description": "Delete from table with filter",
+                "Command": "DELETE FROM table1 WHERE condition"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "delete ",
+                "description": "Delete from table with multiple filters",
+                "Command": "DELETE FROM table1, table2 WHERE table1.id1 = table2.id2 AND condition"
+            }
+        ]
+        
+    },
+     {"mongodb": 
+        [
+            {
+                "Database": "mongodb",
+                "Action": "Read",
+                "description": "List all databases",
+                "Command": "show dbs"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "Read",
+                "description": "List current database",
+                "Command": "db"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "Read",
+                "description": "List all collections",
+                "Command": "Show Collections"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "Choose Database",
+                "Command": "use <database_name>"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "returns a single document",
+                "Command": "db.coll.findOne() "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "returns a cursor - show 20 results - \"it\" to display more",
+                "Command": "db.coll.find()    "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "List a specific collection",
+                "Command": "db.coll.find({name: \"Max\", age: 32}) // "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create collection",
+                "Command": "db.createCollection( {  key: value})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create collection with a $jsonschema",
+                "Command": "db.createCollection(\"contacts\", {validator: {$jsonSchema: {  bsonType: \"object\", required: [\"phone\"], properties: { phone: {  bsonType: string\",  description: \"must be a string and is required\" }, email: { bsonType: \"string\", pattern: @mongodb\\.com$\",  description: \"must be a string and match the regular expression pattern\" }, status:{         enum: [ \"Unknown\", \"Incomplete\" ],  description: \"can only be one of the enum values\"  } }  }} })"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create a clustered collection named products:",
+                "Command": "db.runCommand( {  create: \"products\",   clusteredIndex: { \"key\": { _id: 1 }, \"unique\": true, \"name\": \"products clustered key\" } } )"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create single field index",
+                "Command": "db.coll.createIndex({\"name\": 1}"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create compound index",
+                "Command": "db.coll.createIndex({\"name\": 1, \"date\": 1})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create text index",
+                "Command": "db.coll.createIndex({foo: \"text\", bar: \"text\"}) "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "update",
+                "description": "WARNING! Replaces the entire document",
+                "Command": "db.coll.update({\"_id\": 1}, {\"year\": 2016}) "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "update",
+                "description": "Change collection array",
+                "Command": "db.coll.updateMany({\"year\": 1999}, {$set: {\"decade\": \"90's\"}}, {\"multi\":true})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "update",
+                "description": "FindOneAndUpdate",
+                "Command": "db.coll.findOneAndUpdate({\"name\": \"Max\"}, {$inc: {\"points\": 5}}, {returnNewDocument: true})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "delete ",
+                "description": "Delete a collection",
+                "Command": "db.coll.remove({name: \"Max\"})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "delete ",
+                "description": "Delete all collections",
+                "Command": "db.coll.remove({}) "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "delete ",
+                "description": "double check that you are *NOT* on the PROD cluster... :-)",
+                "Command": "db.dropDatabase() "
+            } 
+        ]   
+    }
+]
