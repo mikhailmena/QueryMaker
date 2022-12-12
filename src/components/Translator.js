@@ -1,7 +1,12 @@
 import commands from "../Assets/commands.json"
 import React, {useState} from "react"
+import Choose from "./Choose"
+import postgres from "../Assets/postgres.json"
+import mysql from "../Assets/mysql.json"
+import mongodb from "../Assets/mongodb.json"
+import '../CssFiles/Translator.css'
 
-const Display = () =>{
+const Translator = () =>{
     const [action, setaction] = useState('')
          ///////////postgres//////////////////
     let postgres = commands[0]
@@ -43,30 +48,68 @@ const Display = () =>{
             console.log(i,each2[i].Action)
             console.log(i,each2[i].description)
             console.log(i,each2[i].Command)
-            
-
-            
             }
             
            })
         }
     }
-    
 
     return (
         <>
- 
+
             <div>       
-            {listmoarray()}
- 
-               
-                
+            {console.log("postgres", postgres.postgres)}
+            {console.log("mysql", mysql)}
+            {console.log("mongodb", mongodb)}
+            {/* {postgres.postgres.map(pdata => (console.log("pdata",pdata)))} */}
+            
+            {commands.map( (data, index) => {
+                    // {console.log("commands each", commands[index])}
+                    
+                    let Data = Object.values(data)
+                    let Keys = Object.keys(data)
+                    let Command = Object.values(data)[0][index].Command
+                    let Action = Object.values(data)[0][index].Action
+                    let Database = Object.entries(data)[0][0]
+                       console.log("Data",Data, "Keys", Keys,"Command", Command,"Database", Database) 
+                          
+                        return (
+                        <>
+                        
+                            <table className="" key={index}>
+                                <thead>
+                                    <tr>Database Tables</tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th >SQL Statements</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Keys: {Keys}  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Database: {Database}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Action: {Action}  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Command: {Command}</td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                            </>
+                        )       
+                })
+                }
+     
             </div>
  
         </>
     )
 }
-export default Display
+export default Translator
 /* {commands[0].postgres[0].Database} */
 // {console.log("data.postgres[key].Database",data.postgres[key].Database)}
 //                             {console.log("data.mysql",data.Mysql[key].Database)}

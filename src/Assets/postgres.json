@@ -1,0 +1,54 @@
+
+        [
+           {"read" : 
+
+                    {"description":    
+                    ["list all  databases","list all schemas","list all tables"
+                    ],
+                    "Commands" :["\\q","\\l","\\dv"]
+                    }
+            },
+            {"select":
+                    {"description":
+                    ["Query all data from a table:","Query data from specified columns of all rows in a table:",
+                    "Query data from specified columns of all rows in a table:","Query data from specified columns"],
+                    "Commands" :
+                    ["SELECT * FROM table_name;","SELECT column_list FROM table;","SELECT DISTINCT (column) FROM table;",
+                    "SELECT column_list FROM table;","SELECT DISTINCT (column) FROM table;","SELECT * FROM table_name WHERE column LIKE '%value%'","SELECT * FROM table_name WHERE column BETWEEN low AND high;",
+                    "SELECT * FROM table1 INNER JOIN table2 ON conditions"]
+                    }
+              
+            },
+            { "create":
+                    {"description": 
+                    ["Create a new role:","Create a new role with a username and password:","Create a new database:",
+                    "Create a new table or a temporary table","Create a view:","Creating an index with the specified name on a table"
+                    ],
+                    "Commands" :
+                    ["CREATE ROLE role_name;","CREATE ROLE username NOINHERIT LOGIN PASSWORD password;","CREATE DATABASE [IF NOT EXISTS] db_name;",
+                    "CREATE [TEMP] TABLE [IF NOT EXISTS] table_name(   pk SERIAL PRIMARY KEY,    c1 type(size) NOT NULL,    c2 type(size) NULL);",
+                    "CREATE OR REPLACE view_name AS"
+                    ]
+                    }
+            },
+            {"update":
+                    {"description":
+                    ["Add a new column to a table:","Change role for the current session to the new_role:","Update data for all rows:",
+                    "Update data for a set of rows specified by a condition in the WHERE clause."
+                    ],
+                    "Commands" :
+                    ["ALTER TABLE table_name ADD COLUMN new_column_name TYPE;","CREATE ROLE username NOINHERIT LOGIN PASSWORD password;",
+                    "UPDATE table_name SET column_1 = value_1,","UPDATE table SET column_1 = value_1, WHERE condition;"
+                    ]
+                    }
+            },
+            {"delete":
+                    {"description":
+                    ["Delete a database permanently:","Delete all rows of a table:","Delete specific rows based on a condition:"
+                    ],
+                    "Commands" :[
+                        "DROP DATABASE IF EXISTS [IF EXISTS] db_name;","DELETE FROM table_name;","DELETE FROM table_name WHERE condition;"
+                    ]
+                    }
+           }
+        ]

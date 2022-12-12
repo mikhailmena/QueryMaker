@@ -1,0 +1,118 @@
+
+        [
+            {
+                "Database": "mongodb",
+                "Action": "Read",
+                "description": "List all databases",
+                "Command": "show dbs"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "Read",
+                "description": "List current database",
+                "Command": "db"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "Read",
+                "description": "List all collections",
+                "Command": "Show Collections"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "Choose Database",
+                "Command": "use <database_name>"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "returns a single document",
+                "Command": "db.coll.findOne() "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "returns a cursor - show 20 results - \"it\" to display more",
+                "Command": "db.coll.find()    "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "select",
+                "description": "List a specific collection",
+                "Command": "db.coll.find({name: \"Max\", age: 32}) // "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create collection",
+                "Command": "db.createCollection( {  key: value})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create collection with a $jsonschema",
+                "Command": "db.createCollection(\"contacts\", {validator: {$jsonSchema: {  bsonType: \"object\", required: [\"phone\"], properties: { phone: {  bsonType: string\",  description: \"must be a string and is required\" }, email: { bsonType: \"string\", pattern: @mongodb\\.com$\",  description: \"must be a string and match the regular expression pattern\" }, status:{         enum: [ \"Unknown\", \"Incomplete\" ],  description: \"can only be one of the enum values\"  } }  }} })"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create a clustered collection named products:",
+                "Command": "db.runCommand( {  create: \"products\",   clusteredIndex: { \"key\": { _id: 1 }, \"unique\": true, \"name\": \"products clustered key\" } } )"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create single field index",
+                "Command": "db.coll.createIndex({\"name\": 1}"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create compound index",
+                "Command": "db.coll.createIndex({\"name\": 1, \"date\": 1})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "create",
+                "description": "Create text index",
+                "Command": "db.coll.createIndex({foo: \"text\", bar: \"text\"}) "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "update",
+                "description": "WARNING! Replaces the entire document",
+                "Command": "db.coll.update({\"_id\": 1}, {\"year\": 2016}) "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "update",
+                "description": "Change collection array",
+                "Command": "db.coll.updateMany({\"year\": 1999}, {$set: {\"decade\": \"90's\"}}, {\"multi\":true})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "update",
+                "description": "FindOneAndUpdate",
+                "Command": "db.coll.findOneAndUpdate({\"name\": \"Max\"}, {$inc: {\"points\": 5}}, {returnNewDocument: true})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "delete ",
+                "description": "Delete a collection",
+                "Command": "db.coll.remove({name: \"Max\"})"
+            },
+            {
+                "Database": "mongodb",
+                "Action": "delete ",
+                "description": "Delete all collections",
+                "Command": "db.coll.remove({}) "
+            },
+            {
+                "Database": "mongodb",
+                "Action": "delete ",
+                "description": "double check that you are *NOT* on the PROD cluster... :-)",
+                "Command": "db.dropDatabase() "
+            } 
+        ]   
+    

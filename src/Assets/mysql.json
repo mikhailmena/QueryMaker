@@ -1,0 +1,178 @@
+
+        [
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list all  databases",
+                "Command": "SHOW DATABASES;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list all tables",
+                "Command": "SHOW TABLES;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list fields",
+                "Command": "SHOW FIELDS FROM table / DESCRIBE table;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "Read",
+                "description": "list created tables",
+                "Command": "SHOW CREATE TABLE table;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query all data from a table:",
+                "Command": "SELECT * FROM table;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query all data from multiple tables",
+                "Command": "SELECT * FROM table1, table2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query all data from a filed in a table",
+                "Command": "SELECT field1, field2 FROM table1, table2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition GROUP BY field;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition GROUP BY field HAVING condition2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition ORDER BY field1, field2;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition ORDER BY field1, field2 DESC;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query data from a table with a filter:",
+                "Command": "SELECT ... FROM ... WHERE condition LIMIT 10;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "select",
+                "description": "Query a filter from a field",
+                "Command": "SELECT DISTINCT field1 FROM ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a Database",
+                "Command": "CREATE DATABASE DatabaseName;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a Database and set character type",
+                "Command": "CREATE DATABASE DatabaseName CHARACTER SET utf8;"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a table",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2);"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create a table with index",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2, INDEX (field));"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create table with primary key",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2, PRIMARY KEY (field1));"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "create",
+                "description": "Create table with mulitple primary keys",
+                "Command": "CREATE TABLE table (field1 type1, field2 type2, PRIMARY KEY (field1,field2));"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change field data in a table",
+                "Command": "ALTER TABLE table MODIFY field1 type1"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change field data in a table",
+                "Command": "ALTER TABLE table MODIFY field1 type1 NOT NULL ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change name of field",
+                "Command": "ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change name of field",
+                "Command": "ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 NOT NULL ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change table field",
+                "Command": "ALTER TABLE table ALTER field1 SET DEFAULT ..."
+            },
+            {
+                "Database": "Mysql",
+                "Action": "update",
+                "description": "Change field order",
+                "Command": "ALTER TABLE table MODIFY field1 type1 FIRST"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "delete ",
+                "description": "Delete everything from table",
+                "Command": "DELETE FROM table1 / TRUNCATE table1"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "delete ",
+                "description": "Delete from table with filter",
+                "Command": "DELETE FROM table1 WHERE condition"
+            },
+            {
+                "Database": "Mysql",
+                "Action": "delete ",
+                "description": "Delete from table with multiple filters",
+                "Command": "DELETE FROM table1, table2 WHERE table1.id1 = table2.id2 AND condition"
+            }
+        ]
+        

@@ -1,14 +1,20 @@
 
 import './App.css';
-import Display from './components/Translator';
+import Choose from './components/Choose';
+import Ptable from './components/Ptable';
+import Translator from './components/Translator';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      
       <div id="headerdiv"></div>
-      <Display/>
-      </header>
+       <Choose/>
+      <Ptable/>
+     
+      <Translator/>
+      
       
     </div>
   );
